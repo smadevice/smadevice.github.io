@@ -1432,6 +1432,7 @@ section {
 .wthree-ab-left img {
 	padding: 0;
 	box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+	width:380px;
 }
 
 .wthree-ab-right {
