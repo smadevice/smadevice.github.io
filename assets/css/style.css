@@ -582,10 +582,52 @@ section {
 	/* left: calc(6% - 20px); */
 }
 
+
 .section-title p {
 	margin-bottom: 0;
 	text-align: left;
 }
+
+
+.header-center {
+    text-align: center;    
+}
+
+.header-center h2 {
+	font-size: 24px;
+	font-weight: bold;
+	position: relative;
+	color: #2c4964;	
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+    
+}
+
+.header-center h2::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.header-center h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #1977cc;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+
+
+
 
 
 /*--------------------------------------------------------------
@@ -613,6 +655,7 @@ section {
 
 .why-us .content p b {
 	font-style: italic;
+	font-size: larger;
 }
 
 .why-us .content .more-btn {
@@ -653,6 +696,7 @@ section {
 	font-size: 20px;
 	color: #2c4964;
 	font-weight: 600;
+	font-family: 'Open Sans';
 }
 
 .why-us .icon-boxes .icon-box p {
@@ -761,31 +805,7 @@ section {
 	text-align: left;
 }
 
-.faq .faq-list .section-title h2 {
-	text-align: center;
-}
 
-.faq .faq-list .section-title h2::before {
-	content: '';
-	position: absolute;
-	display: block;
-	width: 120px;
-	height: 1px;
-	background: #ddd;
-	bottom: 1px;
-	left: calc(50% - 60px);
-}
-
-.faq .faq-list .section-title h2::after {
-	content: '';
-	position: absolute;
-	display: block;
-	width: 40px;
-	height: 3px;
-	background: #1977cc;
-	bottom: 0;
-	left: calc(50% - 20px);
-}
 
 .faq .faq-list i {
 	font-size: 26px;
@@ -1237,7 +1257,7 @@ section {
 .performance-facts__table--small td,
 .performance-facts__table--grid td {
 	font-weight: normal;
-	/* text-align: right; */
+     text-align: center; 
 	padding: 0.25rem;
 	border-bottom: 1px solid black;
 	white-space: nowrap;
@@ -1330,15 +1350,17 @@ section {
 
 .tag-line {
 	font-size: 0.95rem;
-	font-weight: 400;
-	font-style: italic;
-	color: #2c4964;
+	font-weight: 500;
+    font-style: italic;
+    color: #007afd;
+    text-align: right;
 }
 
 .about .icon-boxes img {
 	border-radius: 8px;
 }
 
+.th-text-c{text-align: center !important;}
 
 /*--------------------------------------------------------------
 # slider
@@ -1350,75 +1372,55 @@ section {
 
 .slide1,
 .slide2,
-.slide3,
-.slide4,
-.slide5 {
+.slide3 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
 
 .slide1 {
-	background: url("../img/hero-bg-2.jpg") top center;
+	background: url("../img/hero-bg-1.jpg") top center;
 	background-size: cover;
 	animation: fade 12s infinite;
 	-webkit-animation: fade 12s infinite;
 }
 
 .slide2 {
-	background: url("../img/hero-bg-3.jpg") top center;
+	background: url("../img/hero-bg-2.jpg") top center;
 	background-size: cover;
 	animation: fade2 12s infinite;
 	-webkit-animation: fade2 12s infinite;
 }
 
 
-/* .slide3 {
+ .slide3 {
       background: url("../img/hero-bg-3.jpg") top center;
         background-size: cover;
       animation:fade3 12s infinite;
   -webkit-animation:fade3 12s infinite;
-  } */
+  } 
 
-@keyframes fade {
-	0% {
-		opacity: 1
-	}
-	33.333% {
-		opacity: 0
-	}
-	66.666% {
-		opacity: 0
-	}
-	100% {
-		opacity: 1
-	}
-}
-
-@keyframes fade2 {
-	0% {
-		opacity: 0
-	}
-	33.333% {
-		opacity: 0
-	}
-	66.666% {
-		opacity: 1
-	}
-	100% {
-		opacity: 0
-	}
-}
-
-
-/* @keyframes fade3
+  @keyframes fade
   {
-    0%   {opacity:0}
-    33.333% { opacity: 0}
-    66.666% { opacity: 1}
-    100% { opacity: 0}
-  } */
-
+	0%   {opacity:1}
+	33.333% { opacity: 0}
+	66.666% { opacity: 0}
+	100% { opacity: 1}
+  }
+  @keyframes fade2
+  {
+	0%   {opacity:0}
+	33.333% { opacity: 1}
+	66.666% { opacity: 0 }
+	100% { opacity: 0}
+  }
+  @keyframes fade3
+  {
+	0%   {opacity:0}
+	33.333% { opacity: 0}
+	66.666% { opacity: 1}
+	100% { opacity: 0}
+  }
 .wthree-about {
 	position: relative;
 }
